@@ -40,7 +40,7 @@ const multipartFormDataApiWrapper = (path, formData) => {
     );
 };
 
-export const ApiBoardApiWrapper = {
+export const ApiSampleApiWrapper = {
     /**
      * 테스트 및 참고용 POST Api Call. 추후 삭제예정[TS]
      * @param {*} params
