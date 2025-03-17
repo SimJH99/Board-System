@@ -17,6 +17,7 @@ const apiCallWrapper = (apiMethod, path, params) => {
         });
 };
 
+//GET 요청 API
 const getApiWrapper = (path) => {
     return apiCallWrapper(
         NetApiServer.get.bind(NetApiServer),
@@ -24,6 +25,7 @@ const getApiWrapper = (path) => {
     );
 };
 
+//POST 요청 API
 const postApiWrapper = (path, params) => {
     return apiCallWrapper(
         NetApiServer.post.bind(NetApiServer),
@@ -32,6 +34,7 @@ const postApiWrapper = (path, params) => {
     );
 };
 
+//MultipartFormData 요청 API
 const multipartFormDataApiWrapper = (path, formData) => {
     return apiCallWrapper(
         NetApiServer.multipartFormData.bind(NetApiServer),
