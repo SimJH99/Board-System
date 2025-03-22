@@ -19,6 +19,7 @@ let layout = router.currentRoute.value.meta.layout
 
 <template>
   <div>
+    test
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
