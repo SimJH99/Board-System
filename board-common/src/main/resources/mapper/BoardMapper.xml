@@ -28,14 +28,12 @@
 
     <insert id="createBoard" parameterType="com.test.board.common.model.Board">
         INSERT INTO board (
-            id,
             title,
             content,
             del_yn,
             created_date,
             modified_date
         ) VALUES (
-            #{id},
             #{title},
             #{content},
             'N',
