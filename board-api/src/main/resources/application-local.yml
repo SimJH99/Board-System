@@ -7,11 +7,11 @@ spring:
     password: 1234
 
   mybatis:
-    type-aliases-package: com.test.board.model
+    mapper-locations: classpath:mapper/*.xml # XML Mapper 파일 위치
+    type-aliases-package: com.test.board.common.model # Type Alias 설정 (모델 클래스 패키지)
     configuration:
-      map-underscore-to-camel-case: true
-      default-fetch-size: 100
-      default-statement-timeout: 30
-      default-executor-type: reuse
-      log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
-    mapper-locations: classpath:mapper/*.xml
+      map-underscore-to-camel-case: true # 카멜 케이스와 언더스코어 매핑
+#      default-fetch-size: 100
+#      default-statement-timeout: 30
+#      default-executor-type: reuse
+#      log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl

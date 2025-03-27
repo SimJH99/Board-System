@@ -1,4 +1,4 @@
-package com.test.board.dto;
+package com.test.board.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

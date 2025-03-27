@@ -1,7 +1,7 @@
-package com.test.board.service;
+package com.test.board.api.service;
 
-import com.test.board.mapper.BoardMapper;
-import com.test.board.model.Board;
+import com.test.board.common.mapper.BoardMapper;
+import com.test.board.common.model.Board;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +12,8 @@ import java.util.List;
 public class BoardService {
     private final BoardMapper boardMapper;
 
-    public List<Board> getBoard() {
-        List<Board> boardList = boardMapper.getBoard();
+    public List<Board> getBoardList() {
+        List<Board> boardList = boardMapper.getBoardList();
 
         return boardList;
     }

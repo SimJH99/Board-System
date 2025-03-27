@@ -1,8 +1,8 @@
-package com.test.board.controller;
+package com.test.board.api.controller;
 
-import com.test.board.dto.ResponseDto;
-import com.test.board.model.Board;
-import com.test.board.service.BoardService;
+import com.test.board.common.dto.ResponseDto;
+import com.test.board.common.model.Board;
+import com.test.board.api.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +18,8 @@ public class BoardController {
     private final BoardService boardService;
 
     @GetMapping
-    public ResponseEntity<ResponseDto> getBoard() {
-        List<Board> boardList = boardService.getBoard();
+    public ResponseEntity<ResponseDto> getBoardList() {
+        List<Board> boardList = boardService.getBoardList();
 
         ResponseDto responseDto = new ResponseDto(true, boardList);
         return ResponseEntity.ok(responseDto);

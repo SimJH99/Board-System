@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test.board.mapper.BoardMapper">
-    <select id="getBoard" resultType="com.test.board.model.Board">
-        SELECT BOARD_ID,
-            BOARD_NM,
-            DESCRIPTION,
-            ATTCH_ENABLE,
-            COMMENT_ENABLE,
-            USE_YN,
-            DEL_YN,
-            REG_ID,
-            REG_DT,
-            UPD_ID,
-            UPD_DT
-        FROM TB_BOARD TB
+<mapper namespace="com.test.board.common.mapper.BoardMapper">
+    <select id="getBoardList" resultType="com.test.board.common.model.Board">
+        SELECT
+            id,
+            title,
+            content,
+            del_yn,
+            created_date,
+            modified_date
+        FROM board
     </select>
 </mapper>
