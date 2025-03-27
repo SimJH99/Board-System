@@ -17,4 +17,22 @@ public class BoardService {
 
         return boardList;
     }
+
+    public Board getBoard(Long boardId) {
+        Board board = boardMapper.getBoard(boardId);
+
+        return board;
+    }
+
+    public void createBoard(Board board) {
+        boardMapper.createBoard(board);
+    }
+
+    public void updateBoard(Board board) {
+        boardMapper.updateBoard(board);
+    }
+
+    public void deleteBoard(Long boardId) {
+        boardMapper.deleteBoard(boardId);
+    }
 }

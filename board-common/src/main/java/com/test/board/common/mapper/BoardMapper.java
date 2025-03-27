@@ -11,4 +11,11 @@ public interface BoardMapper {
 
     List<Board> getBoardList();
 
+    Board getBoard(Long boardId);
+
+    void createBoard(Board board);
+
+    void updateBoard(Board board);
+
+    void deleteBoard(Long boardId);
 }

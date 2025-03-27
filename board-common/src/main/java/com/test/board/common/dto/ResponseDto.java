@@ -29,9 +29,9 @@ public class ResponseDto {
     public ResponseDto(boolean isSuccess, String message) {
         this.isSuccess = isSuccess;
 
-        if(StringUtils.hasText(message)) {
+        if (StringUtils.hasText(message)) {
             this.message = message;
-        }else {
+        } else {
             setDefaultMessage();
         }
     }
@@ -43,9 +43,9 @@ public class ResponseDto {
 
     public ResponseDto(boolean isSuccess, String message, @Nullable Object data) {
         this.isSuccess = isSuccess;
-        if(StringUtils.hasText(message)) {
+        if (StringUtils.hasText(message)) {
             this.message = message;
-        }else {
+        } else {
             setDefaultMessage();
         }
         this.data = data;
@@ -54,7 +54,7 @@ public class ResponseDto {
     private void setDefaultMessage() {
         if (isSuccess) {
             this.message = "success";
-        }else {
+        } else {
             this.message = "failed";
         }
     }

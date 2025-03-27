@@ -10,5 +10,52 @@
             created_date,
             modified_date
         FROM board
+        WHERE del_yn != 'N'
     </select>
+
+    <select id="getBoard" resultType="com.test.board.common.model.Board">
+        SELECT
+            id,
+            title,
+            content,
+            del_yn,
+            created_date,
+            modified_date
+        FROM board
+        WHERE id = #{boardId}
+        AND del_yn != 'N'
+    </select>
+
+    <insert id="createBoard" parameterType="com.test.board.common.model.Board">
+        INSERT INTO board (
+            id,
+            title,
+            content,
+            del_yn,
+            created_date,
+            modified_date
+        ) VALUES (
+            #{id},
+            #{title},
+            #{content},
+            'N',
+            NOW(),
+            NOW()
+        )
+    </insert>
+
+    <update id="updateBoard" parameterType="com.test.board.common.model.Board">
+        UPDATE board
+        SET title = #{title},
+            content = #{content},
+            modified_date = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <update id="deleteBoard" parameterType="Long">
+        UPDATE board
+        SET del_yn = 'Y',
+            modified_date = NOW()
+        WHERE id = #{id}
+    </update>
 </mapper>
